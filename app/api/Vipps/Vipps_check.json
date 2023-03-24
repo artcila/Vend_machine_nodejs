@@ -1,3 +1,14 @@
 {
-  "exec": {}
+  "name": "payment_detales",
+  "module": "api",
+  "action": "send",
+  "options": {
+    "url": "https://apitest.vipps.no/ecomm/v2/payments/Vipps_test_MAKE_Payment_REQUEST.data.orderId/details",
+    "headers": {
+      "Authorization": "fromvippsTOken",
+      "Content-Type": "application/json",
+      "Ocp-Apim-Subscription-Key": "65e061ed57264a829e8f46433a3ffde3"
+    }
+  },
+  "output": true
 }
