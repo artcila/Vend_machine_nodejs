@@ -1,3 +1,12 @@
-<!-- Wappler include head-page="layouts/main" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="index" appConnect="local" -->
-<div class="container"></div>
+<!-- Wappler include head-page="layouts/main" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="index" appConnect="local" components="{dmxMasonry:{}}" -->
+<dmx-serverconnect id="Vend_Show_all_products" url="/api/Vending_Machine/Show_all_products"></dmx-serverconnect>
+<div class="container">
+    <div class="row" is="dmx-masonry" id="masonry1" dmx-bind:repeat="Vend_Show_all_products.data.Fetch_Products.data.data">
+        <div class="col">
+
+            <div class="d-block" dmx-text="data[0].id"></div><img>
+            <div class="d-block"></div>
+        </div>
+    </div>
+</div>
 <meta name="ac:route" content="/">
